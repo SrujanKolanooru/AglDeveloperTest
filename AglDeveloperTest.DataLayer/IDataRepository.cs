@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AglDeveloperTest.DataLayer
 {
-    public interface IDataRepositry
+    public interface IDataRepository
     {
         Task<Person[]> GetData(); 
     }

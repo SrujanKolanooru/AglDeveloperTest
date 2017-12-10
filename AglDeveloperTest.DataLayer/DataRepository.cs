@@ -7,7 +7,7 @@ using AglDeveloperTest.Common;
 
 namespace AglDeveloperTest.DataLayer
 {
-    public class DataRepositry : IDataRepositry
+    public class DataRepository : IDataRepository
     {
         public async Task<Person[]> GetData()
         {

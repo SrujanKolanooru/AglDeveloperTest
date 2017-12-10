@@ -13,7 +13,7 @@ namespace AglDeveloperTest.BusinessLayer
     {
         public async Task<List<CatsByGender>> GetCatsDataByOwnerGender()
         {
-            var repo = DependencyResolver.Current.GetService<IDataRepositry>();
+            var repo = DependencyResolver.Current.GetService<IDataRepository>();
             var data = await repo.GetData();
             var tempData = data.Select(p => new
             {

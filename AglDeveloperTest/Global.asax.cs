@@ -24,7 +24,7 @@ namespace AglDeveloperTest
         {
             var container = new UnityContainer();
             container.RegisterType<IDataService, DataService>();
-            container.RegisterType<IDataRepositry, DataRepositry>();
+            container.RegisterType<IDataRepository, DataRepository>();
             DependencyResolver.SetResolver(new UnityDependencyResolver(container));
         }
 

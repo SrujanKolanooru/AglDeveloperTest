@@ -18,11 +18,11 @@ namespace AglDeveloperTest.BusinessLayer.Tests
         [TestMethod]
         public async Task TestMethod1()
         {
-            var dataRepo = new Mock<IDataRepositry>();
+            var dataRepo = new Mock<IDataRepository>();
             dataRepo.Setup(p => p.GetData()).Returns(() => { return GetTestObject1(); });
 
             var container = new UnityContainer();
-            container.RegisterInstance<IDataRepositry>(dataRepo.Object);
+            container.RegisterInstance<IDataRepository>(dataRepo.Object);
             DependencyResolver.SetResolver(new UnityDependencyResolver(container));
 
             DataService service = new DataService();
@@ -34,11 +34,11 @@ namespace AglDeveloperTest.BusinessLayer.Tests
         [TestMethod]
         public async Task TestMethod2()
         {
-            var dataRepo = new Mock<IDataRepositry>();
+            var dataRepo = new Mock<IDataRepository>();
             dataRepo.Setup(p => p.GetData()).Returns(() => { return GetTestObject2(); });
 
             var container = new UnityContainer();
-            container.RegisterInstance<IDataRepositry>(dataRepo.Object);
+            container.RegisterInstance<IDataRepository>(dataRepo.Object);
             DependencyResolver.SetResolver(new UnityDependencyResolver(container));
 
             DataService service = new DataService();
@@ -50,11 +50,11 @@ namespace AglDeveloperTest.BusinessLayer.Tests
         [TestMethod]
         public async Task TestMethod3()
         {
-            var dataRepo = new Mock<IDataRepositry>();
+            var dataRepo = new Mock<IDataRepository>();
             dataRepo.Setup(p => p.GetData()).Returns(() => { return GetTestObject3(); });
 
             var container = new UnityContainer();
-            container.RegisterInstance<IDataRepositry>(dataRepo.Object);
+            container.RegisterInstance<IDataRepository>(dataRepo.Object);
             DependencyResolver.SetResolver(new UnityDependencyResolver(container));
 
             DataService service = new DataService();
