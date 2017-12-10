@@ -1,0 +1,31 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+@if (Model != null && Model is List<AglDeveloperTest.Model.CatsByGender>)
+{
+    <h2>Cats by Owners Gender</h2>
+    <div>
+        @foreach (var item in Model as List<AglDeveloperTest.Model.CatsByGender>)
+        {
+            <h3>@item.Gender</h3>
+            <ul>
+                @foreach (var cat in item.Cats)
+                {
+                    <li>@cat</li>
+                }
+            </ul>
+        }
+    </div>
+}
+
+@if (Model != null && Model is Exception)
+{
+    var ex = (Model as Exception);
+    <div>
+        <h3>Could not fetch the data</h3>
+        <h5>@ex.Message</h5>
+        <h6>@ex.StackTrace</h6>
+    </div>
+}
